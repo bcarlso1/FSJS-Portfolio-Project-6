@@ -6,18 +6,6 @@ const app = express();
 // add json file
 const data = require('./data')
 
-
-// test
-
-const colors = [
-    'red',
-    'orange',
-    'yellow',
-    'green',
-    'blue',
-    'purple'
-  ];
-
 //set up middleware
 
 // set view engine to pug
@@ -30,18 +18,16 @@ app.use("/static",
 // set up your routes
 
 app.get('/', (req, res) => {
-    res.render('index', colors 
-    //{data: "projects"} 
-    );
+    res.render('index', {data: projects} );
 })
 
 app.get('/about', (req, res) => {
     res.render('about');
 })
 
-app.get('/project', (req, res) => {
-    res.render('project');
-})
+// app.get('/project', (req, res) => {
+   // res.render('project');
+// })
 
 // listen port 3000
 app.listen(3000, () =>  

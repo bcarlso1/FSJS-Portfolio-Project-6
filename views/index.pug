@@ -10,11 +10,14 @@ block content
     
     .grid-x.grid-margin-x.small-up-2.medium-up-2.large-up-3
 
+    each projects in data
+      li= project
+    //- ul 
       each color in colors
-       p = color
-
-     //- .cell
+        li= color
+    //- h2= prompt
+    //- .cell
         a(href='#{projectLink}')
-          img.thumbnail(src='#{projectImage}')
-          h5 = project_name
-      
+        img.thumbnail(src='#{projectImage}')
+        h5 = project_name
+        
