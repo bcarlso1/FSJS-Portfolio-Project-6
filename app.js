@@ -1,4 +1,4 @@
-// require express
+// requirements
 
 const express = require('express');
 const app = express();
@@ -17,7 +17,7 @@ app.set('view engine', 'pug')
 app.use("/static",
     express.static('public'));
 
-// set up your routes
+// set up routes
 
 app.get('/', (req, res) => {
     // test if projects objects coming through
@@ -31,9 +31,18 @@ app.get('/about', (req, res) => {
     res.render('about');
 })
 
- app.get('/project/:id', (req, res) => {
-    res.render('project/:id', {prompt: "huh?"});
- })
+ app.get('/projects/:id', (req, res) => {
+    res.render('project', { 
+        title: projects[req.params.id].project_name, 
+        detail: projects[req.params.id].description,
+        techs: projects[req.params.id].technologies, 
+        livelink: projects[req.params.id].live_link,
+        gitlink: projects[req.params.id].github_link, 
+        // move up a folder out of "projects" to find images
+        image1: "../" + projects[req.params.id].image_urls[0],
+        image2: "../" + projects[req.params.id].image_urls[1] 
+    });
+ });
 
 // listen port 3000
 app.listen(3000, () =>  

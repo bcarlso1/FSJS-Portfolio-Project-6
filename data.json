@@ -7,7 +7,7 @@
                 "technologies": ["Javascript", "CSS"],
                 "live_link": "https://bcarlso1.github.io/FSJS-Portfolio-Project-1/",
                 "github_link": "https://github.com/bcarlso1/FSJS-Portfolio-Project-1",
-                "image_urls": ["static/images/Unit 1 A.png", "static/images/Unit 1 B.png"] 
+                "image_urls": ["static/images/Unit1A.png", "static/images/Unit1B.png"] 
         },
         {
                 "id": 1,
@@ -40,7 +40,7 @@
                 "id": 4,
                 "project_name": "Employee Directory from API",
                 "description": "Directory that creates a listing of employee profiles from an API",
-                "technologies": ["Javascript", "CSS"],
+                "technologies": ["Javascript", "CSS", "API"],
                 "live_link": "https://bcarlso1.github.io/FSJS-Portfolio-Project-5/",
                 "github_link": "https://github.com/bcarlso1/FSJS-Portfolio-Project-5",
                 "image_urls": ["static/images/Unit 5 A.png", "static/images/Unit 5 B.png"] 
