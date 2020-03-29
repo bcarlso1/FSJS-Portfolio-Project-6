@@ -1,49 +1,49 @@
 {
     "projects": [
-        "Project 1", {
+        {
                 "id": 0,
                 "project_name": "Random Quote Generator",
                 "description": "This project automatically loads new random quotes",
                 "technologies": ["Javascript", "CSS"],
                 "live_link": "https://bcarlso1.github.io/FSJS-Portfolio-Project-1/",
                 "github_link": "https://github.com/bcarlso1/FSJS-Portfolio-Project-1",
-                "image_urls": ["images/Unit 1 A.png", "images/Unit 1 B.png"] 
+                "image_urls": ["static/images/Unit 1 A.png", "static/images/Unit 1 B.png"] 
         },
-        "Project 2", {
+        {
                 "id": 1,
                 "project_name": "List Pagination and Filtering",
                 "description": "This project dynamically divides items into pages and offers filtering by search terms",
                 "technologies": ["Javascript", "CSS"],
                 "live_link": "https://bcarlso1.github.io/FSJS-Portfolio-Project-2/",
                 "github_link": "https://github.com/bcarlso1/FSJS-Portfolio-Project-2",
-                "image_urls": ["images/Unit 2 A.png", "images/Unit 2 B.png"] 
+                "image_urls": ["static/images/Unit 2 A.png", "static/images/Unit 2 B.png"] 
         },
-        "Project 3", {
+        {
                 "id": 2,
                 "project_name": "Interactive Form",
                 "description": "An interatcive form with many dynamic elements acting upon user entries",
                 "technologies": ["Javascript", "CSS"],
                 "live_link": "https://bcarlso1.github.io/FSJS-Portfolio-Project-3/",
                 "github_link": "https://github.com/bcarlso1/FSJS-Portfolio-Project-3",
-                "image_urls": ["images/Unit 3 A.png", "images/Unit 3 B.png"] 
+                "image_urls": ["static/images/Unit 3 A.png", "static/images/Unit 3 B.png"] 
         },
-        "Project 4", {
+        {
                 "id": 3,
                 "project_name": "Word Guessing Game",
                 "description": "A game where players try to guess a random phrase with limited attempts",
                 "technologies": ["Javascript", "CSS"],
                 "live_link": "https://bcarlso1.github.io/FSJS-Portfolio-Project-4/",
                 "github_link": "https://github.com/bcarlso1/FSJS-Portfolio-Project-4",
-                "image_urls": ["images/Unit 4 A.png", "images/Unit 4 B.png"] 
+                "image_urls": ["static/images/Unit 4 A.png", "static/images/Unit 4 B.png"] 
         },
-        "Project 5", {
+        {
                 "id": 4,
                 "project_name": "Employee Directory from API",
                 "description": "Directory that creates a listing of employee profiles from an API",
                 "technologies": ["Javascript", "CSS"],
                 "live_link": "https://bcarlso1.github.io/FSJS-Portfolio-Project-5/",
                 "github_link": "https://github.com/bcarlso1/FSJS-Portfolio-Project-5",
-                "image_urls": ["images/Unit 5 A.png", "images/Unit 5 B.png"] 
+                "image_urls": ["static/images/Unit 5 A.png", "static/images/Unit 5 B.png"] 
         }
     ]
 

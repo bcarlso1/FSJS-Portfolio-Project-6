@@ -10,15 +10,10 @@ block content
     
     .grid-x.grid-margin-x.small-up-2.medium-up-2.large-up-3
 
-    //- testing access to json
+    //- pull projects from json
     each project in projects
-      li= project
-    //- ul 
-      each color in colors
-        li= color
-    //- h2= prompt
-    //- .cell
-        a(href='#{projectLink}')
-        img.thumbnail(src='#{projectImage}')
-        h5 = project_name
-        
+        .cell
+        a(href= "/project/" + project.id)
+          img.thumbnail(src= project.image_urls[0])
+        h5= project.project_name
+    

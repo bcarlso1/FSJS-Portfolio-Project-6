@@ -2,9 +2,11 @@
 
 const express = require('express');
 const app = express();
+const pug = require('pug');
 
 // add json file
-const data = require('./data')
+const data = require('./data.json')
+const projects = data.projects
 
 //set up middleware
 
@@ -18,16 +20,20 @@ app.use("/static",
 // set up your routes
 
 app.get('/', (req, res) => {
-    res.render('index', {data: projects} );
+    // test if projects objects coming through
+        // console.log(projects);
+        //res.end();
+    // project is property and value name so just list once
+    res.render('index', {projects} );
 })
 
 app.get('/about', (req, res) => {
     res.render('about');
 })
 
-// app.get('/project', (req, res) => {
-   // res.render('project');
-// })
+ app.get('/project/:id', (req, res) => {
+    res.render('project/:id', {prompt: "huh?"});
+ })
 
 // listen port 3000
 app.listen(3000, () =>  
