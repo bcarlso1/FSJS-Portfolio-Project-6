@@ -44,6 +44,16 @@ app.get('/about', (req, res) => {
     });
  });
 
+app.use((req, res, next) => {
+  const err= new Error('Aaaagh!');
+    next(err); 
+});
+
+app.use((err, req, res, next) => {
+    res.locals.error = err;
+    res.render('error');
+});
+
 // listen port 3000
 app.listen(3000, () =>  
     console.log("App is listening on Port 3000"));
