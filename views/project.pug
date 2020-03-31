@@ -6,18 +6,18 @@ block content
   article.grid-container.portfolio-intro.portfolio-project
     .grid-x
       .cell.small-6.medium-9.large-9
-
+          //- variable for title from app.js
         h1= title
         p.lead.text-light= detail  
 
       .cell.portfolio-meta.small-6.medium-2.large-3
         h6 Technologies
         ul
+            //- each loop add each item from techs variable
           each tech in techs
             li= tech
 
-
-        //- Use template literals and interpolation to add URLs to the hrefs below so they link to the repo and the live version of each project.
+          //- links populated from variables
         a.button.expanded(href= livelink) Live Demo
         a.button.expanded(href= gitlink) GitHub Repo
     

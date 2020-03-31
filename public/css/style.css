@@ -1,6 +1,7 @@
 
 h1,h2,h3,h4,h5,p{
   font-family: 'Merriweather', serif;
+  color: navy;
 }
 
   h5{
@@ -147,4 +148,18 @@ a:hover{
 
 .portfolio-bio{
     line-height: 25px;
+}
+
+/* CSS changes */
+
+.off-canvas {
+  background-color: navy;
+}
+
+.thumbnail {
+  transition: transform 2s; 
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
 }

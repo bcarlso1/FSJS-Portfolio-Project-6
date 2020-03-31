@@ -19,20 +19,26 @@ app.use("/static",
 
 // set up routes
 
+// index route
 app.get('/', (req, res) => {
-    // test if projects objects coming through
+    // test if projects objects coming through:
         // console.log(projects);
-        //res.end();
+            //res.end();
     // project is property and value name so just list once
     res.render('index', {projects} );
 })
 
+// about page route
 app.get('/about', (req, res) => {
     res.render('about');
 })
 
+
+// dynamic routes for project pages
  app.get('/projects/:id', (req, res) => {
+    // render "project" from "projects"
     res.render('project', { 
+        // variables pug files, access json items
         title: projects[req.params.id].project_name, 
         detail: projects[req.params.id].description,
         techs: projects[req.params.id].technologies, 
@@ -44,18 +50,27 @@ app.get('/about', (req, res) => {
     });
  });
 
+// error handling
+
+// sets up 404 message
+
 app.use((req, res, next) => {
-  const err = new Error("Aaaagh! It's an error!");
-  console.log('Error encountered!');
-  err.status = 500;
-    next(err); 
-});
+    // set up error msg variable
+    const err = new Error('Sorry, Page Not Found');
+    // set status code
+    err.status = 404;
+    next(err);
+}); 
+
+// sets up error object
 
 app.use((err, req, res, next) => {
     res.locals.error = err;
+    // log note to console
+    console.log("Sorry, Page Not Found")
     res.status(err.status);
     res.render('error');
-});
+}); 
 
 // listen port 3000
 app.listen(3000, () =>  
