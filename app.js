@@ -68,6 +68,7 @@ app.use((err, req, res, next) => {
     res.locals.error = err;
     // log note to console
     console.log("Sorry, Page Not Found")
+    console.log(err);
     res.status(err.status);
     res.render('error');
 }); 
